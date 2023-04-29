@@ -12,6 +12,10 @@ export const configStackProps: ConfigStackProps = {
   config: {
     desiredCount: 2,
     cpu: 8192,
+    appRunnerSpec: {
+      cpu: "0.25 vCPU",
+      memory: "1 GB",
+    },
     incomingWebhookUrl: "https://hooks.slack.com/services/********",
     senderAddress: "example@example.com",
     scheduleExpression: "cron(0/10 4 ? * MON-FRI *)",
@@ -19,9 +23,5 @@ export const configStackProps: ConfigStackProps = {
     snsTopicArn: "arn:aws:sns:ap-northeast-1:123456789012:example-sns-topic-name",
     snsTopicTokyoArn: "arn:aws:sns:ap-northeast-1:123456789012:example-sns-topic-name",
     bucketName: "arn:aws:s3:::my-bucket-name-0123456789012",
-    appRunnerSpec: {
-      cpu: "0.25 vCPU",
-      memory: "1 GB",
-    },
   },
 };
