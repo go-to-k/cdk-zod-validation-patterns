@@ -10,6 +10,7 @@ export const configStackProps: ConfigStackProps = {
     region: "ap-northeast-1",
   },
   config: {
+    stackName: "dev-app-goto-CdkZodValidationPatternsStack",
     desiredCount: 2,
     cpu: 8192,
     incomingWebhookUrl: "https://hooks.slack.com/services/********",
