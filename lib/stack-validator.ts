@@ -1,5 +1,5 @@
 import { IValidation } from "constructs";
-import { StackInput, StackInputSchema } from "./stack-input";
+import { StackInput, stackInputSchema } from "./stack-input";
 
 export class StackValidator implements IValidation {
   private stackInput: StackInput;
@@ -12,7 +12,7 @@ export class StackValidator implements IValidation {
     const errors: string[] = [];
 
     try {
-      StackInputSchema.parse(this.stackInput);
+      stackInputSchema.parse(this.stackInput);
     } catch (e) {
       errors.push(JSON.stringify(e));
     }
