@@ -18,7 +18,6 @@ export const stackInputSchema = z.object({
     return /^[0-9.]+ vCPU$/.test(val as string);
   }),
   appRunnerSpec: appRunnerSpecSchema,
-  // z.string().length(12),
 });
 
 export type StackInput = z.infer<typeof stackInputSchema>;
