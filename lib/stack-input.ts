@@ -14,6 +14,9 @@ export const stackInputSchema = z.object({
   bucketArn: z
     .string()
     .regex(/^arn:aws:s3:::(?!.*\.\.)(?!.*\.-)(?!.*-\.)[a-z0-9][a-z0-9.-]{1,61}[a-z0-9.]$/),
+  appRunnerCpu: z.custom<`${number} vCPU`>((val) => {
+    return /^[0-9.]+ vCPU$/.test(val as string);
+  }),
   appRunnerSpec: appRunnerSpecSchema,
   // z.string().length(12),
 });

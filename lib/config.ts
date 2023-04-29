@@ -20,6 +20,7 @@ export const configStackProps: ConfigStackProps = {
     snsTopicArn: "arn:aws:sns:ap-northeast-1:123456789012:example-sns-topic-name",
     snsTopicTokyoArn: "arn:aws:sns:ap-northeast-1:123456789012:example-sns-topic-name",
     bucketArn: "arn:aws:s3:::my-bucket-name-0123456789012",
+    appRunnerCpu: "0.25 vCPU",
     appRunnerSpec: {
       cpu: "0.25 vCPU",
       memory: "1 GB",
