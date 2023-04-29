@@ -1,0 +1,1 @@
+# cdk-zod-validation-patterns
