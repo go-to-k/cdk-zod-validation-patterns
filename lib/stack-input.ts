@@ -11,7 +11,7 @@ export const stackInputSchema = z.object({
   scheduleExpression: z.string().regex(/^cron\(([^\s]+\s){5}[^\s]+\)$/),
   snsTopicArn: z.string().regex(/^arn:(aws|aws-cn|aws-us-gov):sns:[^:]+:\d{12}:.+$/),
   snsTopicTokyoArn: z.string().regex(/^arn:(aws|aws-cn|aws-us-gov):sns:ap-northeast-1:\d{12}:.+$/),
-  bucketName: z
+  bucketArn: z
     .string()
     .regex(/^arn:aws:s3:::(?!.*\.\.)(?!.*\.-)(?!.*-\.)[a-z0-9][a-z0-9.-]{1,61}[a-z0-9.]$/),
   appRunnerSpec: appRunnerSpecSchema,
