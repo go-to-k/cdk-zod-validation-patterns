@@ -2,7 +2,7 @@ import { z } from "zod";
 import { appRunnerSpecSchema } from "./app-runner-spec-type";
 
 export const stackInputSchema = z.object({
-  stackName: z.string().startsWith("dev").endsWith("Stack").includes("-goto-"),
+  stackName: z.string().max(128).startsWith("dev").endsWith("Stack").includes("-goto-"),
   desiredCount: z.number().nonnegative(),
   cpu: z.number().positive().multipleOf(256).max(16384),
   incomingWebhookUrl: z.string().url().min(1),
